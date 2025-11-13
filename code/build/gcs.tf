@@ -8,8 +8,8 @@ resource "google_storage_bucket" "example" {
   location      = "us-central1"
   force_destroy = true
 
-  uniform_bucket_level_access = false
-  public_access_prevention = "enforced"
+  #uniform_bucket_level_access = false
+  #public_access_prevention = "enforced"
 }
 
 resource "random_id" "rand_suffix" {
