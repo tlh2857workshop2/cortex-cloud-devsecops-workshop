@@ -70,6 +70,9 @@ resource "google_compute_instance" "web_host" {
 
   tags = ["web"]
 
+  labels = {
+    yor_trace = "5dc2f2f8-940c-49ec-8abb-2227ba981fb5"
+  }
 }
 
 
@@ -77,6 +80,9 @@ resource "google_storage_bucket" "flowbucket" {
   name          = "${local.resource_prefix}-flowlogs"
   location      = var.region
   force_destroy = true
+  labels = {
+    yor_trace = "a70a1585-13b8-41c2-b278-3aa967c49605"
+  }
 }
 
 
